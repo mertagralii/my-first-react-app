@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PhoneBook from "./PhoneBook";
 
 export default function App() {
   const isLoggedIn = true;
@@ -14,6 +15,8 @@ export default function App() {
   return (
     <div className="container">
       <Navbar />
+      <hr />
+      <PhoneBook />
       {isLoggedIn ? <Content /> : <LoginForm />}
     </div>
   );
