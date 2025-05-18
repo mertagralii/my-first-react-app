@@ -1,38 +1,84 @@
-Herşeyden önce aşağıdakilerin bilgisayarda kurulu olması gerekiyor
 
-Node.js
+# React Projesi Oluşturma (Vite ile)
 
-npm
+## 🚀 Gereksinimler
 
-bu iki uygulama yüklendikten sonra yaptıklarımız
+Başlamadan önce bilgisayarında şu yazılımlar kurulu olmalı:
 
-Çalışacağımız klasöre geliyoruz ve sağ tıklayıp o klasörü hedef alarak cmd yi açıyoruz
+- **Node.js** – JavaScript'i tarayıcı dışında çalıştırmak için gereken ortam.
+- **npm (Node Package Manager)** – JavaScript paketlerini yöneten araçtır. Node.js ile birlikte kurulur.
 
+### 📥 İndir:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)  
+
+---
+
+## 🔧 Kurulum Adımları
+
+1. Projeyi oluşturacağımız klasöre geliyoruz, sağ tıklayıp “CMD” veya “Terminal” açıyoruz.
+
+2. Aşağıdaki komutla Vite projesi başlatıyoruz:
+
+```bash
 npm create vite@latest
+```
 
-bunu yazıyoruz sonrasında y'ye basıyoruz sonrasında ise projemizin ismini veriyoruz biz my-first-react-app dedik
+3. Sırasıyla:  
+   - Proje adı giriyoruz → örnek: `my-first-react-app`  
+   - Framework olarak React  
+   - Dil olarak JavaScript seçiyoruz  
 
-ardından framework seçiyoruz react ardından javascript'i seçtik
+4. Klasöre giriyoruz:
 
-ardından klasörümüz oluşuyor sonrasında içerisine girmemiz gerek bunun için ise cd (projemizin ismini yazıyoruz)
+```bash
+cd my-first-react-app
+```
 
-ardından code . diyip projeyi açıyoruz
+5. VS Code ile projeyi açmak için:
 
-proje visual studio code'da açılıcak ondan sonra ise terminali açıp npm i diyerek gerekli node_modules'lerimizi yüklüyoruz (vita'nıniçinde otomatik var ama onların kurulması gerekiyor)
+```bash
+code .
+```
 
-ardından proje hazır
+6. Terminalde bağımlılıkları yüklemek için:
 
-node_modules => kullandığımız npm paketleri bulunuyor
-public ==> .net'den wwwroot'un aynısı
-package.json => npm paketlerimizi tutuyor (npm paketlerinin sürümüne kadar herşeyi sürümüne sürümüne tutuyor)
+```bash
+npm install
+```
 
-Kaynaklar
-react=> https://react.dev/learn
-next.js => https://nextjs.org/docs/app/getting-started/installation
-vite => https://vite.dev/guide/
-transform => https://transform.tools/html-to-jsx
-Boostwatch => https://bootswatch.com
-cnd boostwatch => https://cdnjs.com/libraries/bootswatch
-npm => https://www.npmjs.com
-node.js => https://nodejs.org/en
-Javascript => https://javascript.info , https://developer.mozilla.org/en-US/docs/Web/JavaScript
+> ℹ️ Vite bazı dosyaları kurar ama `node_modules` klasörü için bu komut şarttır.
+
+---
+
+## 📁 Proje Yapısı
+
+- `node_modules/` → Kurulu tüm npm paketlerini içerir  
+- `public/` → Statik dosyalar (ASP.NET `wwwroot` gibi)  
+- `package.json` → Paketlerin listesi, sürümleri ve komutlar burada yer alır  
+
+---
+
+## 🧠 Ekstra Bilgiler (Kısaca)
+
+| Teknoloji   | Açıklama                                                  |
+|-------------|----------------------------------------------------------|
+| React       | Bileşen tabanlı UI geliştirme kütüphanesi                |
+| Next.js     | React tabanlı SSR (sunucu taraflı render) destekleyen framework |
+| Vite        | Hızlı build ve hot-reload sunan geliştirme aracı         |
+| Bootswatch  | Bootstrap için hazır tema şablonları                      |
+| html-to-jsx | HTML kodlarını JSX'e çevirmenizi sağlar (online tool)     |
+
+---
+
+## 🔗 Yararlı Kaynaklar
+
+- [React Öğrenme](https://reactjs.org/tutorial/tutorial.html)  
+- [Next.js Başlangıç](https://nextjs.org/docs/getting-started)  
+- [Vite Kılavuz](https://vitejs.dev/guide/)  
+- [HTML → JSX Dönüştürücü](https://magic.reactjs.net/htmltojsx.htm)  
+- [Bootswatch](https://bootswatch.com/)  
+- [Bootswatch CDN](https://www.jsdelivr.com/package/npm/bootswatch)  
+- [JavaScript MDN](https://developer.mozilla.org/tr/docs/Web/JavaScript)
+- [JavaScript Öğren](https://developer.mozilla.org/tr/docs/Web/JavaScript/Guide)
