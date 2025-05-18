@@ -237,7 +237,7 @@ function CounterBtn({ count, onClick }) {
   //     return;
   //   }
   //   setCount(count + 1);
-  // }
+  // }.
 
   // re-render
 
