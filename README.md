@@ -22,6 +22,10 @@ proje visual studio code'da açılıcak ondan sonra ise terminali açıp npm i d
 
 ardından proje hazır
 
+node_modules => kullandığımız npm paketleri bulunuyor
+public ==> .net'den wwwroot'un aynısı
+package.json => npm paketlerimizi tutuyor (npm paketlerinin sürümüne kadar herşeyi sürümüne sürümüne tutuyor)
+
 Kaynaklar
 react=> https://react.dev/learn
 next.js => https://nextjs.org/docs/app/getting-started/installation
