@@ -11,7 +11,7 @@ Başlamadan önce bilgisayarında şu yazılımlar kurulu olmalı:
 ### 📥 İndir:
 
 - [Node.js](https://nodejs.org/)
-- [JavaScript MDN](https://developer.mozilla.org/tr/docs/Web/JavaScript)
+- [npm](https://www.npmjs.com/)  
 
 ---
 
@@ -80,5 +80,5 @@ npm install
 - [HTML → JSX Dönüştürücü](https://magic.reactjs.net/htmltojsx.htm)  
 - [Bootswatch](https://bootswatch.com/)  
 - [Bootswatch CDN](https://www.jsdelivr.com/package/npm/bootswatch)  
-- [npm](https://www.npmjs.com/)  
+- [JavaScript MDN](https://developer.mozilla.org/tr/docs/Web/JavaScript)
 - [JavaScript Öğren](https://developer.mozilla.org/tr/docs/Web/JavaScript/Guide)
