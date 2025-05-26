@@ -287,3 +287,103 @@ if (x > 5) {
   const [data, setData] = useState(null);  // böyle olmaz
 }
 ```
+Örnek bir Code : Sayaç 
+
+```js
+import { useState } from "react";
+
+// React Akışı 
+// İlk başta kullanacağımız useStateleri belirledik (Sadece sayaç kullanacağımız için sayaçtan gittik)
+// ardından bunu ana componentimize yazdık.
+// sonrasında bu ana componentimizde neler olmasını istediğini yazdık (fonskiyon olarak ben sadece sayaç arttırma ve azaltma işlemi yapmak istedim)
+// ardından return dedik ve altına da index.html sayfamızda olacak olan componentleri yazdık
+// Bu diper componentlere de bir veri göndermek istediğim içi (c#'da method'a veri göndermek gibi veri gönderdim, birisine sayacı diğer ikisine de fonksiyonu)
+// ardından birisinde sadece sayacın ekrana basılması için olan kısmı yazdım
+// diğerinde de sayacı arttıran fonksiyonu yazdım
+//  diğerinde de sayacı azaltan fonksiyonu yazdım
+
+
+export default function App() { // Ana Component'imiz.
+  const [count, setCount] = useState(0);  // Başlangıçta count değerini 0 olarak veriyoruz. setCount ise değişikliği yapıcak yaptığında da sayfa re-rendering olcak
+
+
+  function handleInputChange(e) { // Sayacımızı inputtan gelen değere göre değiştiren Fonksiyon
+    console.log("handleInputChange fonksiyonu çalıştırıldı.");
+    const value = Number(e.target.value) // e.target.value ==> İnput'a yazılan yeni değeri verir.
+    setCount(value);
+    console.log('Sayac İnputtan gelen değere göre değiştirildi.');
+  }
+
+  function updateCount() { // Sayacımızı arttıran fonksiyon
+    console.log('Update Count Fonksiyonu Çalıştı');
+    setCount(count + 1); // count'un değerini 1 arttırıyor.
+    console.log('Sayaç Arttırıldı.');
+  }
+
+  function decreaseCount() { // Sayacımızı azaltan fonksiyon
+    console.log('decreaseCount Fonksiyonu Çalıştı.');
+    setCount(count - 1); // count değerini 1 azaltıyor.
+    console.log('Sayaç Azaltıldı.');
+  }
+
+  function countReset() { // Sayacımızı Sıfırlayan Fonksiyon
+    console.log('Sayac Sıfırlama Fonksiyonu çağrıldı.');
+    setCount(0)
+    console.log('Sayac Sıfırlandı.');
+  }
+
+  return (
+    <>
+      <SayacGiris count={count} onChange={handleInputChange} />
+      <SayacEkrani sayac={count} />  {/* Sayac Ekranı Componenti buda da sayac adında bir değer gönderdik değeri de count*/}
+      <SayacButonu updateCount={updateCount} /> {/* Sayac Butonu  Componenti buda da UpdateCount adında bir function gönderdik */}
+      <SayacAzaltButonu decreaseCount={decreaseCount} /> {/* Sayac Azalt Butonu  Componenti buda da decreaseCount adında bir function gönderdik */}
+      <SayacSifirlamaButonu countReset={countReset} />
+    </>
+  )
+}
+
+function SayacGiris({ count, onChange }) { // Sayacı Elle girmemizi saylayan Componentimiz
+  return (
+    <>
+      <label>
+        Sayaç Değeri Gir:{" "}
+        <input type="number" value={count} onChange={onChange} /> {/* value ==> Değeri gösterir , onChange ==>  kullanıcı input’a yazdığında bu fonksiyon tetiklenir. */}
+      </label>
+    </>
+  )
+}
+
+function SayacEkrani({ sayac }) { // Sayac Ekranı fonksiyonumuz içinde sayac adında bir değer geliyor.
+  return (
+    <>
+      <p>Sayac : {sayac} </p> {/* Sayacı gösteriyoruz */}
+    </>
+  )
+}
+
+function SayacButonu({ updateCount }) { // bunda ise UpdateCount adında bir fonksiyon var.
+  return (
+    <>
+      <button onClick={updateCount}>Arttir</button> {/* Burda da UpdateCount fonksiyonunu onclik ile çağırıyoruz. */}
+    </>
+  )
+}
+
+function SayacAzaltButonu({ decreaseCount }) { // bunda ise decreaseCount adında bir fonksiyon var.
+  return (
+    <>
+      <button onClick={decreaseCount}>Azalt</button> {/* Burda da UpdateCount fonksiyonunu onclik ile çağırıyoruz. */}
+    </>
+  )
+}
+
+function SayacSifirlamaButonu({ countReset }) { // bunda ise countReset adında bir fonksiyon var.
+  return (
+    <>
+      <button onClick={countReset}>Sıfırla</button>  {/* Burda da countReset fonksiyonunu onclik ile çağırıyoruz. */}
+    </>
+  )
+}
+
+```
